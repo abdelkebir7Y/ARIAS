@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../../tailwind-css/config.js"></script>
+  </head>
+  <body>
+    <div nav-bar="../../components/nav-bar/nav-bar.html"></div>
+    <header class="relative">
+      <img src="../../assets/images/work-room.png" />
+      <div class="absolute top-0 right-0 bottom-0 left-0">
+        <div class="max-w-screen-xl px-4 pt-28 mx-auto">
+          <h1 class="text-7xl uppercase text-white">
+            <span class="text-primary">arias</span>
+            laboratory <br />& medical system
+          </h1>
+          <p class="text-white text-2xl mt-3">
+            Designers and manufacturers to support you furnishing <br />
+            your laboratory and hospital.
+          </p>
+          <button class="text-white bg-primary py-3.5 px-9 rounded-full my-10">
+            Let’s discuss
+          </button>
+          <div
+            class="bg-gradient-to-r from-primary via-primary to-transparen w-6/12 flex justify-around pr-8"
+          >
+            <div class="flex flex-col">
+              <spn class="text-6xl text-white">10+</spn>
+              <spn class="text-white">years of experience</spn>
+            </div>
+            <div class="flex flex-col">
+              <spn class="text-6xl text-white">45</spn>
+              <spn class="text-white">Business partners</spn>
+            </div>
+            <div class="flex flex-col">
+              <spn class="text-6xl text-white">25</spn>
+              <spn class="text-white">Projects</spn>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div footer="../../components/footer/footer.html"></div>
+  </body>
+  <script>
+    function includeHTML(attribute) {
+      var z, i, elmnt, file, xhttp;
+      /* Loop through a collection of all HTML elements: */
+      z = document.getElementsByTagName("*");
+      for (i = 0; i < z.length; i++) {
+        elmnt = z[i];
+        /*search for elements with a certain atrribute:*/
+        file = elmnt.getAttribute(attribute);
+        if (file) {
+          /* Make an HTTP request using the attribute value as the file name: */
+          xhttp = new XMLHttpRequest();
+          xhttp.onreadystatechange = function () {
+            if (this.readyState == 4) {
+              if (this.status == 200) {
+                elmnt.innerHTML = this.responseText;
+              }
+              if (this.status == 404) {
+                elmnt.innerHTML = "Page not found.";
+              }
+              /* Remove the attribute, and call this function once more: */
+              elmnt.removeAttribute(attribute);
+              includeHTML();
+            }
+          };
+          xhttp.open("GET", file, true);
+          xhttp.send();
+          /* Exit the function: */
+          return;
+        }
+      }
+    }
+    includeHTML("nav-bar");
+    includeHTML("footer");
+  </script>
+</html>
