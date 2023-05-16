@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <script src="../../tailwind-css/config.js"></script>
+  <style>
+    .form-text-area {
+      display: block;
+      width: 100%;
+      padding: 0.5rem 0rem;
+      resize: vertical;
+    }
+    .form-text-area:focus {
+      outline: none;
+      border-bottom: 2px solid #339ed3;
+    }
+    .form-text-area::placeholder {
+      text-transform: capitalize;
+      color: #808388;
+    }
+  </style>
+  <body class="p-2">
+    <label class="text-primary font-bold text-lg capitalize" for="text-area"
+      >Label</label
+    >
+    <textarea
+      class="form-text-area font-semibold"
+      id="text-area"
+      type="text"
+      placeholder="text area"
+    />
+  </body>
+</html>
