@@ -8,7 +8,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="../../tailwind-css/config.js"></script>
   </head>
-  <body>
+  <body class="bg-white">
     <div nav-bar="../../components/nav-bar/nav-bar.html"></div>
     <header class="relative">
       <img src="../../assets/images/work-room.png" />
@@ -44,41 +44,89 @@
         </div>
       </div>
     </header>
+    <section class="bg-primary">
+      <div
+        class="bg-primary py-14 max-w-screen-xl px-4 mx-auto text-white text-center"
+      >
+        <h1 class="text-4xl">
+          ARIAS… SOLUTIONS THAT MEET YOUR NEEDS AND FURTHER
+        </h1>
+        <p class="text-xl mt-7">
+          At Arias we are inspired by providing everyone with a wide range of
+          high-quality laboratory, health and office furniture. In laboratory,
+          we use sustainable materials like steel and electro-zinced steel to
+          insure a long-lasting life of the furniture an environment friendly
+          product.
+        </p>
+      </div>
+    </section>
+    <section>
+      <div class="pt-14 max-w-screen-xl px-4 mx-auto">
+        <h4 class="text-2xl text-primary text-center">Products Categories</h4>
+        <div class="flex justify-around items-center gap-10 mt-16 mb-12">
+          <img
+            src="../../assets/icons/arrow-left.png"
+            class="cursor-pointer h-8"
+          />
+          <div class="grid grid-cols-3 gap-4 grow">
+            <div client-card-1="../../components/cards/client-card.html"></div>
+            <div
+              client-card-2="../../components/cards/client-card.html"
+              class="scale-y-110"
+            ></div>
+            <div client-card-3="../../components/cards/client-card.html"></div>
+          </div>
+          <img
+            src="../../assets/icons/arrow-right.png"
+            class="cursor-pointer h-8"
+          />
+        </div>
+        <div class="flex justify-center items-center gap-2 mb-10">
+          <span class="bg-blue-200 block h-2.5 w-2.5 rounded-full"></span>
+          <span class="bg-blue-200 block h-2.5 w-2.5 rounded-full"></span>
+          <span class="bg-blue-200 block h-2.5 w-2.5 rounded-full"></span>
+          <span class="bg-blue-200 block h-2.5 w-2.5 rounded-full"></span>
+          <span class="bg-blue-200 block h-2.5 w-2.5 rounded-full"></span>
+          <span class="bg-primary block h-2.5 w-2.5 rounded-full"></span>
+          <span class="bg-blue-200 block h-2.5 w-2.5 rounded-full"></span>
+          <span class="bg-blue-200 block h-2.5 w-2.5 rounded-full"></span>
+          <span class="bg-blue-200 block h-2.5 w-2.5 rounded-full"></span>
+          <span class="bg-blue-200 block h-2.5 w-2.5 rounded-full"></span>
+          <span class="bg-blue-200 block h-2.5 w-2.5 rounded-full"></span>
+        </div>
+        <div class="flex justify-center">
+          <div button="../../components/buttons/button2.html"></div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="pt-8 max-w-screen-xl px-4 mx-auto">
+        <h4 class="text-2xl text-primary text-center">Services</h4>
+        <div class="grid grid-cols-3 gap-4 mt-9 mb-12">
+          <div service-card-1="../../components/cards/service-card.html"></div>
+          <div service-card-2="../../components/cards/service-card.html"></div>
+          <div service-card-3="../../components/cards/service-card.html"></div>
+          <div service-card-4="../../components/cards/service-card.html"></div>
+          <div service-card-5="../../components/cards/service-card.html"></div>
+          <div service-card-6="../../components/cards/service-card.html"></div>
+        </div>
+      </div>
+    </section>
     <div footer="../../components/footer/footer.html"></div>
   </body>
+  <script src="../../utils/include-html.js"></script>
   <script>
-    function includeHTML(attribute) {
-      var z, i, elmnt, file, xhttp;
-      /* Loop through a collection of all HTML elements: */
-      z = document.getElementsByTagName("*");
-      for (i = 0; i < z.length; i++) {
-        elmnt = z[i];
-        /*search for elements with a certain atrribute:*/
-        file = elmnt.getAttribute(attribute);
-        if (file) {
-          /* Make an HTTP request using the attribute value as the file name: */
-          xhttp = new XMLHttpRequest();
-          xhttp.onreadystatechange = function () {
-            if (this.readyState == 4) {
-              if (this.status == 200) {
-                elmnt.innerHTML = this.responseText;
-              }
-              if (this.status == 404) {
-                elmnt.innerHTML = "Page not found.";
-              }
-              /* Remove the attribute, and call this function once more: */
-              elmnt.removeAttribute(attribute);
-              includeHTML();
-            }
-          };
-          xhttp.open("GET", file, true);
-          xhttp.send();
-          /* Exit the function: */
-          return;
-        }
-      }
-    }
     includeHTML("nav-bar");
+    includeHTML("client-card-1");
+    includeHTML("client-card-2");
+    includeHTML("client-card-3");
+    includeHTML("service-card-1");
+    includeHTML("service-card-2");
+    includeHTML("service-card-3");
+    includeHTML("service-card-4");
+    includeHTML("service-card-5");
+    includeHTML("service-card-6");
+    includeHTML("button");
     includeHTML("footer");
   </script>
 </html>
