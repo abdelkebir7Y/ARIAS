@@ -8,36 +8,38 @@
   <script src="../../tailwind-css/config.js"></script>
 
   <body>
-    <nav class="flex bg-primary py-4 px-4" aria-label="Breadcrumb">
-      <ol class="inline-flex items-center space-x-1 md:space-x-3">
-        <li class="inline-flex items-center">
-          <a
-            href="#"
-            class="inline-flex items-center text-md text-white hover:text-blue-600 dark:text-white dark:hover:text-white"
-          >
-            Home
-          </a>
-        </li>
-        <li>
-          <div class="flex items-center">
-            <span class="text-md text-white mx-2">/</span>
+    <nav class="flex bg-primary py-4 px-4 w-full" aria-label="Breadcrumb">
+      <div class="mx-auto w-full max-w-screen-xl">
+        <ol class="inline-flex items-center space-x-1 md:space-x-3">
+          <li class="inline-flex items-center">
             <a
               href="#"
-              class="ml-1 text-md text-white hover:text-blue-600 md:ml-2 dark:text-white dark:hover:text-white"
-              >Projects</a
+              class="inline-flex items-center text-md text-white hover:text-blue-600 dark:text-white dark:hover:text-white"
             >
-          </div>
-        </li>
-        <li aria-current="page">
-          <div class="flex items-center">
-            <span class="text-md text-white mx-2">/</span>
-            <span
-              class="ml-1 text-md font-medium text-gray-500 md:ml-2 dark:text-white"
-              >Flowbite</span
-            >
-          </div>
-        </li>
-      </ol>
+              Home
+            </a>
+          </li>
+          <li>
+            <div class="flex items-center">
+              <span class="text-md text-white mx-2">/</span>
+              <a
+                href="#"
+                class="ml-1 text-md text-white hover:text-blue-600 md:ml-2 dark:text-white dark:hover:text-white"
+                >Projects</a
+              >
+            </div>
+          </li>
+          <li aria-current="page">
+            <div class="flex items-center">
+              <span class="text-md text-white mx-2">/</span>
+              <span
+                class="ml-1 text-md font-medium text-gray-500 md:ml-2 dark:text-white"
+                >Flowbite</span
+              >
+            </div>
+          </li>
+        </ol>
+      </div>
     </nav>
   </body>
 </html>
