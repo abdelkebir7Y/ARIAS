@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../../tailwind-css/config.js"></script>
+    <style>
+      .document-card {
+        box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.25);
+      }
+      .document-card span {
+        word-spacing: 9999px;
+      }
+    </style>
+  </head>
+  <body class="bg-white min-h-screen">
+    <!-- NavBar -->
+    <div nav-bar="../../components/nav-bar/nav-bar.html"></div>
+    <!-- Breadcrumbs -->
+    <nav class="flex bg-primary py-4 px-4 w-full" aria-label="Breadcrumb">
+      <div class="mx-auto w-full max-w-screen-xl">
+        <ol class="inline-flex items-center space-x-1 md:space-x-3">
+          <li class="inline-flex items-center">
+            <a
+              href="#"
+              class="inline-flex items-center text-md text-white hover:text-blue-600 dark:text-white dark:hover:text-white"
+            >
+              Home
+            </a>
+          </li>
+          <li aria-current="page">
+            <div class="flex items-center">
+              <span class="text-md text-white mx-2">/</span>
+              <span
+                class="ml-1 text-md font-medium text-gray-500 md:ml-2 dark:text-white"
+                >Download</span
+              >
+            </div>
+          </li>
+        </ol>
+      </div>
+    </nav>
+    <!-- Page -->
+    <section class="mx-auto w-full max-w-screen-xl my-16">
+      <span
+        class="block w-full text-primary uppercase text-3xl font-semibold text-center mb-10"
+        >Download</span
+      >
+      <div class="grid grid-cols-3 gap-5">
+        <div
+          class="document-card bg-primary flex flex-col gap-7 pl-7 py-6 pr-4 pt-20 relative"
+        >
+          <div class="absolute bg-white top-0 right-5">
+            <img class="my-6 mx-3" src="../../assets/icons/pdf.png" alt="pdf" />
+          </div>
+          <span class="text-white text-5xl font-bold uppercase"
+            >Lab furniture catalogue</span
+          >
+          <ul class="list-disc ml-5 font-semibold text-lg text-white">
+            <li>English Version</li>
+            <li>Spanish Version</li>
+          </ul>
+          <a
+            class="block ml-auto mt-12 mt-auto capitalize text-primary bg-white text-lg font-semibold border w-max px-12 py-3 border-white border-2 rounded-full hover:text-white hover:bg-transparent delay-100 duration-150 ease-in"
+            href="#"
+            >Request A catalogue
+          </a>
+        </div>
+        <div
+          class="document-card bg-primary flex flex-col gap-7 pl-7 py-6 pr-4 pt-20 relative"
+        >
+          <div class="absolute bg-white top-0 right-5">
+            <img class="my-6 mx-3" src="../../assets/icons/pdf.png" alt="pdf" />
+          </div>
+          <span class="text-white text-5xl font-bold uppercase"
+            >Medical Products catalogue</span
+          >
+          <ul class="list-disc ml-5 font-semibold text-xl text-white">
+            <li>Stainless Steel health furniture catalogue</li>
+            <li>Hospital beds and Furniture flyer</li>
+          </ul>
+          <a
+            class="block ml-auto mt-12 mt-auto capitalize text-primary bg-white text-lg font-semibold border w-max px-12 py-3 border-white border-2 rounded-full hover:text-white hover:bg-transparent delay-100 duration-150 ease-in"
+            href="#"
+            >Request A catalogue
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <div footer="../../components/footer/footer.html"></div>
+  </body>
+  <script src="../../utils/include-html.js"></script>
+  <script>
+    includeHTML('nav-bar');
+    includeHTML('footer');
+  </script>
+</html>
