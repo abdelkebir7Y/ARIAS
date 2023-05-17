@@ -102,13 +102,44 @@
     <section>
       <div class="pt-8 max-w-screen-xl px-4 mx-auto">
         <h4 class="text-2xl text-primary text-center">Services</h4>
-        <div class="grid grid-cols-3 gap-4 mt-9 mb-12">
+        <div class="grid grid-cols-3 gap-4 mt-9">
           <div service-card-1="../../components/cards/service-card.html"></div>
           <div service-card-2="../../components/cards/service-card.html"></div>
           <div service-card-3="../../components/cards/service-card.html"></div>
           <div service-card-4="../../components/cards/service-card.html"></div>
           <div service-card-5="../../components/cards/service-card.html"></div>
           <div service-card-6="../../components/cards/service-card.html"></div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="pt-8">
+        <h4 class="text-2xl text-primary text-center">Projects</h4>
+        <div class="bg-primary">
+          <div
+            class="max-w-screen-xl px-4 mx-auto flex justify-between mt-9 mb-12"
+          >
+            <div class="w-5/12 flex flex-col justify-center">
+              <p class="text-white text-xl mb-6">
+                Over the years, we have had the privilege of working with a
+                diverse range of clients, including hospitals, research centers,
+                and educational institutions. Our expertise lies in providing
+                tailor-made solutions for all laboratory furniture needs, from
+                conception to execution. Each project that we have undertaken
+                has been unique, with its specific requirements and challenges.
+              </p>
+              <div button-2="../../components/buttons/button3.html"></div>
+            </div>
+            <div
+              class="bg-white w-5/12 aspect-square p-14 flex justify-center items-center"
+            >
+              <img
+                src="../../assets/images/client.png"
+                class="w-full h-full object-cover"
+                alt=""
+              />
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -127,6 +158,7 @@
     includeHTML("service-card-5");
     includeHTML("service-card-6");
     includeHTML("button");
+    includeHTML("button-2");
     includeHTML("footer");
   </script>
 </html>
