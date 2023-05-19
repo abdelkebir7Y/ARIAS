@@ -11,33 +11,40 @@
   <body class="bg-white">
     <div nav-bar="../../components/nav-bar/nav-bar.html"></div>
     <header class="relative">
-      <img src="../../assets/images/work-room.png" />
+      <img
+        src="../../assets/images/work-room.png"
+        class="h-[100vh] md:w-full"
+      />
       <div class="absolute top-0 right-0 bottom-0 left-0">
-        <div class="max-w-screen-xl px-4 pt-28 mx-auto">
-          <h1 class="text-7xl uppercase text-white">
-            <span class="text-primary">arias</span>
-            laboratory <br />& medical system
-          </h1>
-          <p class="text-white text-2xl mt-3">
-            Designers and manufacturers to support you furnishing <br />
-            your laboratory and hospital.
-          </p>
-          <button class="text-white bg-primary py-3.5 px-9 rounded-full my-10">
-            Let’s discuss
-          </button>
+        <div class="max-w-screen-xl pt-28 mx-auto md:px-4">
+          <div class="px-4 md:px-0">
+            <h1 class="text-3xl uppercase text-white md:text-7xl">
+              <span class="text-primary">arias</span>
+              laboratory <br />& medical system
+            </h1>
+            <p class="text-white text-sm mt-3 md:text-2xl">
+              Designers and manufacturers to support you furnishing <br />
+              your laboratory and hospital.
+            </p>
+            <button
+              class="text-white bg-primary py-3.5 px-9 rounded-full my-10"
+            >
+              Let’s discuss
+            </button>
+          </div>
           <div
-            class="bg-gradient-to-r from-primary via-primary to-transparen w-6/12 flex justify-around pr-8"
+            class="bg-gradient-to-r mt-20 p-4 from-primary via-primary to-transparent flex justify-around pr-8 md:w-6/12 md:mt-0"
           >
             <div class="flex flex-col">
-              <spn class="text-6xl text-white">10+</spn>
+              <spn class="text-3xl text-white md:text-6xl">10+</spn>
               <spn class="text-white">years of experience</spn>
             </div>
             <div class="flex flex-col">
-              <spn class="text-6xl text-white">45</spn>
+              <spn class="text-3xl text-white md:text-6xl">45</spn>
               <spn class="text-white">Business partners</spn>
             </div>
             <div class="flex flex-col">
-              <spn class="text-6xl text-white">25</spn>
+              <spn class="text-3xl text-white md:text-6xl">25</spn>
               <spn class="text-white">Projects</spn>
             </div>
           </div>
@@ -66,19 +73,25 @@
         <div class="flex justify-around items-center gap-10 mt-16 mb-12">
           <img
             src="../../assets/icons/arrow-left.png"
-            class="cursor-pointer h-8"
+            class="cursor-pointer hidden h-8 md:block"
           />
-          <div class="grid grid-cols-3 gap-4 grow">
-            <div client-card-1="../../components/cards/client-card.html"></div>
+          <div class="grow md:grid md:grid-cols-3 md:gap-4">
+            <div
+              client-card-1="../../components/cards/client-card.html"
+              class="hidden h-8 md:block"
+            ></div>
             <div
               client-card-2="../../components/cards/client-card.html"
               class="scale-y-110"
             ></div>
-            <div client-card-3="../../components/cards/client-card.html"></div>
+            <div
+              client-card-3="../../components/cards/client-card.html"
+              class="hidden h-8 md:block"
+            ></div>
           </div>
           <img
             src="../../assets/icons/arrow-right.png"
-            class="cursor-pointer h-8"
+            class="cursor-pointer hidden h-8 md:block"
           />
         </div>
         <div class="flex justify-center items-center gap-2 mb-10">
@@ -102,7 +115,7 @@
     <section>
       <div class="pt-8 max-w-screen-xl px-4 mx-auto">
         <h4 class="text-2xl text-primary text-center">Services</h4>
-        <div class="grid grid-cols-3 gap-4 mt-9">
+        <div class="grid grid-cols-1 gap-4 mt-9 md:grid-cols-3">
           <div service-card-1="../../components/cards/service-card.html"></div>
           <div service-card-2="../../components/cards/service-card.html"></div>
           <div service-card-3="../../components/cards/service-card.html"></div>
@@ -112,14 +125,16 @@
         </div>
       </div>
     </section>
-    <section>
+    <section class="relative z-50">
       <div class="pt-8">
         <h4 class="text-2xl text-primary text-center">Projects</h4>
-        <div class="bg-primary">
+        <div class="relative md:bg-primary">
           <div
-            class="max-w-screen-xl px-4 mx-auto flex justify-between mt-9 mb-12"
+            class="max-w-screen-xl mx-auto flex flex-col justify-between mt-9 mb-12 md:flex-row md:px-4"
           >
-            <div class="w-5/12 flex flex-col justify-center">
+            <div
+              class="w-full bg-primary px-4 pt-8 pb-48 flex flex-col items-center justify-center md:w-5/12 md:items-start md:px-0 md:pt-0 md:pb:0"
+            >
               <p class="text-white text-xl mb-6">
                 Over the years, we have had the privilege of working with a
                 diverse range of clients, including hospitals, research centers,
@@ -131,7 +146,7 @@
               <div button-2="../../components/buttons/button3.html"></div>
             </div>
             <div
-              class="bg-white w-5/12 aspect-square p-14 flex justify-center items-center"
+              class="w-full -mt-52 aspect-square p-14 flex justify-center items-center md:bg-white md:w-5/12 md:relative md:mt-0"
             >
               <img
                 src="../../assets/images/client.png"
@@ -146,16 +161,22 @@
     <section>
       <h4 class="text-2xl text-primary text-center">Contact Us</h4>
       <div class="relative mt-9 mb-12">
-        <div class="absolute bottom-0 top-0 right-0 left-0 w-6/12">
+        <div
+          class="hidden absolute bottom-0 top-0 right-0 left-0 w-6/12 md:block"
+        >
           <img
             src="../../assets/images/image 29.png"
             alt=""
             class="w-full h-full object-cover"
           />
         </div>
-        <div class="max-w-screen-xl px-4 mx-auto flex justify-end pt-28 pb-12">
-          <form class="bg-white flex flex-col gap-7 w-6/12">
-            <div class="flex justify-between px-2 gap-2">
+        <div
+          class="max-w-screen-xl px-4 mx-auto flex justify-end pb-12 md:pt-28"
+        >
+          <form class="w-full bg-white flex flex-col gap-7 md:w-6/12">
+            <div
+              class="flex flex-col justify-between px-2 gap-6 md:flex-row md:gar-2"
+            >
               <div class="relative border rounded-md px-2 h-12 grow">
                 <label
                   class="label absolute left-5 bg-white px-3 -top-[9px] text-gray-400 text-xs font-medium capitalize"
@@ -183,7 +204,9 @@
                 />
               </div>
             </div>
-            <div class="flex justify-between px-2 gap-2">
+            <div
+              class="flex flex-col justify-between px-2 gap-6 md:flex-row md:gar-2"
+            >
               <div class="relative border rounded-md px-2 h-12 grow">
                 <label
                   class="label absolute left-5 bg-white px-3 -top-[9px] text-gray-400 text-xs font-medium capitalize"
