@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <style>
+    html,
+    body {
+      height: 100vh;
+      width: 100vw;
+      margin: 0px;
+      padding: 0px;
+    }
+  </style>
+  <script src="../../tailwind-css/config.js"></script>
+  <body class="bg-[#0003]">
+    <div class="md:w-full md:h-full p-2">
+      <div
+        class="mx-auto w-full h-full max-w-screen-xl p-4 py-6 flex flex-col items-center justify-center"
+      >
+        <div
+          class="relative w-full flex flex-col h-6/12 min-h-[500px] md:flex-row"
+        >
+          <div class="absolute -top-3 -right-3">
+            <img src="../../assets//icons//close.png" alt="" class="h-7" />
+          </div>
+          <div
+            class="bg-primary w-full p-8 flex flex-col justify-between md-flex-col md:w-5/12"
+          >
+            <div>
+              <h2 class="text-3xl text-secondary">Request a catalogue</h2>
+              <p class="text-secondary mt-2">
+                Contact us and we will put all the information you need at your
+                fingertips.
+              </p>
+            </div>
+            <ul class="hidden text-secondary md:block">
+              <li class="my-1 capitalize flex items-center gap-2">
+                <img src="../../assets//icons/phone-white.png" class="h-6" />
+                <div class="flex flex-col">
+                  <a href="#" class="hover:underline">+34 960 013 019</a>
+                  <a href="#" class="hover:underline">+34 960 013 019</a>
+                </div>
+              </li>
+              <li class="my-1 capitalize flex items-center gap-2">
+                <img src="../../assets//icons/mail-white.png" class="h-6" />
+                <div class="flex flex-col">
+                  <a href="#" class="lowercase hover:underline"
+                    >admin@arias.com</a
+                  >
+                </div>
+              </li>
+              <li class="my-1 capitalize flex items-center gap-1 mt-3">
+                <img src="../../assets//icons/facebook-white.png" class="h-6" />
+                <img src="../../assets//icons/linkedin-white.png" class="h-6" />
+                <img
+                  src="../../assets//icons/instagram-white.png"
+                  class="h-6"
+                />
+                <img src="../../assets//icons/twitter-white.png" class="h-6" />
+              </li>
+            </ul>
+          </div>
+          <div class="bg-white w-full p-8 md:w-7/12">
+            <div class="flex flex-col gap-8 pb-8 md:flex-row">
+              <div class="grow" input-1="../form/input.html"></div>
+              <div class="grow" input-2="../form/input.html"></div>
+            </div>
+            <div class="flex flex-col gap-8 pb-8 md:flex-row">
+              <div class="grow" input-3="../form/input.html"></div>
+              <div class="grow" input-4="../form/input.html"></div>
+            </div>
+            <div class="pb-8">
+              <div textarea="../form/textarea.html"></div>
+            </div>
+            <div class="pb-8">
+              <input
+                type="checkbox"
+                name="legal-info"
+                id="legal-info"
+                checked
+                class="accent-primary focus:accent-primary scale-150"
+              />
+              <label class="ml-2 text-gray-400 text-base" for="legal-info"
+                >I have read and accept the
+                <a href="#" class="text-primary underline">
+                  Legal information</a
+                ></label
+              >
+            </div>
+            <div class="flex justify-center md:justify-end">
+              <div button="../buttons/button2.html"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="../../utils/include-html.js"></script>
+  <script>
+    includeHTML("input-1");
+    includeHTML("input-2");
+    includeHTML("input-4");
+    includeHTML("input-3");
+    includeHTML("textarea");
+    includeHTML("checkbox");
+    includeHTML("button");
+  </script>
+</html>
